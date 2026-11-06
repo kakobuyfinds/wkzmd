@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>WheeBuy spreadsheet: guida italiana a taglie, foto e confronti</title>
+<meta name="description" content="WheeBuy spreadsheet: una guida italiana per cercare sneakers e abbigliamento, confrontare misure e foto e valutare il costo totale prima di scegliere.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#302537">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="WheeBuy spreadsheet — prima i dettagli, poi la scelta">
+<meta property="og:description" content="Categorie, consigli di confronto e risposte pratiche per una ricerca di moda più consapevole.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&amp;fit=crop&amp;w=1200&amp;q=75">
+<link rel="preconnect" href="https://images.unsplash.com">
+<style>
+:root{
+  --ink:#302537;
+  --paper:#faf8f2;
+  --line:#dbd6cd;
+  --muted:#665e68;
+  --lime:#e0ee99;
+  --white:#fff;
+  --radius:18px
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif
+}
+a{color:inherit;text-underline-offset:4px}
+a:focus-visible,summary:focus-visible{
+  outline:3px solid #7352a1;
+  outline-offset:5px
+}
+img{display:block;width:100%;height:auto}
+h1,h2,h3,p,figure{margin:0}
+h1,h2,h3{line-height:1.12;letter-spacing:-.035em}
+h1{
+  font-size:clamp(2.8rem,6.5vw,5.8rem);
+  font-weight:750;
+  max-width:13ch
+}
+h2{font-size:clamp(1.9rem,3.7vw,3rem)}
+h3{font-size:1.3rem}
+p+p{margin-top:1rem}
+.wrap{width:min(1180px,92%);margin-inline:auto}
+.top{background:var(--ink);color:var(--paper)}
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:23px 0
+}
+.logo{
+  font-weight:750;
+  letter-spacing:-.04em;
+  font-size:1.25rem;
+  text-decoration:none
+}
+.edition{
+  font-size:.78rem;
+  letter-spacing:.12em;
+  text-transform:uppercase
+}
+.category-box{
+  padding:26px 0 30px;
+  border-bottom:1px solid var(--line)
+}
+.eyebrow{
+  font-size:.75rem;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  font-weight:750
+}
+.categories{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:8px;
+  margin-top:15px
+}
+.categories a{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  min-height:62px;
+  border:1px solid var(--line);
+  border-radius:9px;
+  padding:11px 13px;
+  text-decoration:none;
+  font-size:.87rem;
+  font-weight:650;
+  background:var(--white)
+}
+.categories a::after{content:'↗';font-size:1.1rem}
+.categories a:hover{
+  background:var(--lime);
+  border-color:var(--ink)
+}
+.hero{
+  display:grid;
+  grid-template-columns:1.15fr 1fr;
+  gap:48px;
+  align-items:center;
+  padding:56px 0
+}
+.hero .eyebrow{margin-bottom:20px}
+.intro{
+  font-size:1.1rem;
+  color:var(--muted);
+  max-width:54ch;
+  margin-top:24px
+}
+.button{
+  display:inline-flex;
+  align-items:center;
+  gap:25px;
+  background:var(--ink);
+  color:var(--white);
+  border-radius:99px;
+  padding:14px 23px;
+  text-decoration:none;
+  font-weight:650;
+  margin-top:25px
+}
+.button:hover{background:#53405e}
+.hero figure{
+  transform:rotate(2deg);
+  background:var(--lime);
+  padding:13px;
+  border-radius:var(--radius)
+}
+.hero img{
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:10px
+}
+.hero figcaption{font-size:.78rem;padding:10px 5px 0}
+.answer{
+  padding:28px 32px;
+  background:var(--lime);
+  border-radius:var(--radius);
+  display:grid;
+  grid-template-columns:1fr 2fr;
+  gap:28px
+}
+.answer h2{font-size:1.6rem}
+.section{
+  padding:64px 0;
+  border-bottom:1px solid var(--line)
+}
+.section-head{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:25px;
+  margin-bottom:28px
+}
+.section-head p{max-width:42ch;color:var(--muted)}
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px
+}
+.step{padding-top:20px;border-top:2px solid var(--ink)}
+.number{
+  display:inline-block;
+  margin-bottom:20px;
+  font-size:.8rem;
+  letter-spacing:.1em
+}
+.step p{margin-top:14px;color:var(--muted)}
+.editorial{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:26px
+}
+.editorial figure{
+  background:#eee9e2;
+  border-radius:var(--radius);
+  overflow:hidden
+}
+.editorial img{aspect-ratio:3/2;object-fit:cover}
+.editorial figcaption{padding:17px 20px;font-size:.85rem}
+.caption-note{
+  display:block;
+  color:var(--muted);
+  font-size:.78rem;
+  margin-top:5px
+}
+.articles{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  margin-top:30px
+}
+.article{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:26px
+}
+.article .eyebrow{color:var(--muted);margin-bottom:17px}
+.article p{margin-top:16px;font-size:.94rem}
+.article ul{padding-left:20px;font-size:.9rem}
+.article li{margin:9px 0}
+.comparison{overflow-x:auto;margin-top:25px}
+table{
+  border-collapse:collapse;
+  width:100%;
+  font-size:.92rem;
+  text-align:left
+}
+th,td{
+  border-bottom:1px solid var(--line);
+  padding:17px 14px;
+  vertical-align:top
+}
+th{background:#eee9e2}
+th:first-child{width:24%}
+.faq{
+  display:grid;
+  grid-template-columns:.8fr 1.5fr;
+  gap:50px
+}
+details{border-bottom:1px solid var(--line);padding:19px 0}
+details:first-child{padding-top:0}
+summary{cursor:pointer;font-weight:700;font-size:1.05rem}
+details p{color:var(--muted);padding-top:13px}
+.closing{
+  background:var(--ink);
+  color:var(--paper);
+  padding:38px;
+  border-radius:var(--radius);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+  margin:48px 0
+}
+.closing p{margin-top:13px;max-width:62ch}
+.closing .button{
+  background:var(--lime);
+  color:var(--ink);
+  flex-shrink:0;
+  margin:0
+}
+footer{
+  padding:10px 0 35px;
+  font-size:.8rem;
+  color:var(--muted)
+}
+footer p{max-width:95ch}
+.footer-row{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-bottom:15px
+}
+@media(max-width:850px){
+  .categories{grid-template-columns:repeat(3,1fr)}
+  .hero{gap:25px}
+  .articles{grid-template-columns:1fr}
+  .faq{grid-template-columns:1fr;gap:30px}
+  .closing{align-items:start;flex-direction:column}
+}
+@media(max-width:580px){
+  header{padding:18px 0}
+  .edition{font-size:.65rem}
+  .logo{font-size:1.05rem}
+  .categories{grid-template-columns:repeat(2,1fr)}
+  .categories a{font-size:.8rem;min-height:58px}
+  .hero{grid-template-columns:1fr;padding:35px 0;gap:32px}
+  .hero figure{transform:none}
+  .hero img{aspect-ratio:4/3}
+  .answer{grid-template-columns:1fr;padding:25px;gap:15px}
+  .section{padding:42px 0}
+  .section-head{display:block}
+  .section-head p{margin-top:15px}
+  .steps,.editorial{grid-template-columns:1fr}
+  .closing{padding:26px}
+  .steps{gap:28px}
+  th,td{padding:12px 8px}
+  h1{max-width:15ch}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebPage",
+      "name":"WheeBuy spreadsheet: guida italiana a taglie, foto e confronti",
+      "inLanguage":"it",
+      "description":"Guida indipendente alla ricerca di sneakers e abbigliamento: categorie, misure, fotografie e costo totale.",
+      "about":{
+        "@type":"Thing",
+        "name":"WheeBuy spreadsheet"
+      }
+    },
+    {
+      "@type":"Article",
+      "headline":"Sneakers: misure prima del numero",
+      "inLanguage":"it",
+      "description":"Come confrontare lunghezza del piede, sistema di taglie, profilo e foto delle sneakers."
+    },
+    {
+      "@type":"Article",
+      "headline":"Abbigliamento: confrontare capi reali",
+      "inLanguage":"it",
+      "description":"Come confrontare torace, spalle, lunghezza, tessuto e vestibilità di felpe e magliette."
+    },
+    {
+      "@type":"Article",
+      "headline":"Accessori: proporzioni e particolari",
+      "inLanguage":"it",
+      "description":"Come valutare dimensioni, chiusure, cuciture e fotografie di borse e accessori."
+    },
+    {
+      "@type":"FAQPage",
+      "inLanguage":"it",
+      "mainEntity":[
+        {
+          "@type":"Question",
+          "name":"Che cos’è una WheeBuy spreadsheet?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"È una raccolta di riferimenti a prodotti, utile per organizzare una ricerca e confrontare articoli. Ogni scheda va ricontrollata nella sua destinazione attuale prima di prendere una decisione."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Questa pagina è il sito ufficiale di WheeBuy?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"No. È una guida editoriale indipendente. I collegamenti commerciali di questa pagina portano a Hipobuyfind, non a WheeBuy. Non dichiariamo affiliazioni con WheeBuy o con i marchi citati."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Le foto QC dimostrano l’autenticità?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"No. Le foto QC, cioè fotografie di controllo qualità, possono mostrare dettagli visibili, ma non certificano autenticità, composizione dei materiali o durata."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Come confrontare le taglie senza affidarsi solo a S, M o L?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Confronta le misure in centimetri con un capo che già possiedi. Verifica come sono stati misurati torace, spalle e lunghezza e considera la vestibilità desiderata."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Il prezzo mostrato è il costo finale?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Non necessariamente. Controlla la variante selezionata e le eventuali spese di servizio, trasporto e importazione indicate durante l’acquisto. Questa guida non pubblica preventivi o tempi di consegna garantiti."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!--
+index.html.
+Ricerca editoriale: WheeBuy spreadsheet.
+Google non era accessibile durante la preparazione: non è stata verificata
+una prima pagina Google di dieci siti distinti. Sono stati consultati
+risultati di ricerca alternativi e pagine pubbliche; nessuna classifica
+Google è dichiarata. Nessun prezzo, disponibilità o rapporto ufficiale
+è attestato.
+-->
+<link rel="canonical" href="https://kakobuyfinds.github.io/wkzmd/">
+</head>
+<body>
+<div class="top">
+  <header class="wrap">
+    <a class="logo" href="https://www.hipobuyfind.com">hipobuyfind.com</a>
+    <span class="edition">Taccuino di stile / IT</span>
+  </header>
+</div>
+
+<main class="wrap">
+  <nav class="category-box" aria-label="Categorie del catalogo Hipobuyfind">
+    <p class="eyebrow">La ricerca comincia da una categoria</p>
+    <div class="categories">
+      <a href="https://hipobuyfind.com/category-911-Shoes.html">Scarpe</a>
+      <a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html">Felpe e maglioni</a>
+      <a href="https://hipobuyfind.com/category-913-T-Shirts.html">T-shirt</a>
+      <a href="https://hipobuyfind.com/category-914-Jackets.html">Giacche</a>
+      <a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html">Pantaloni e shorts</a>
+      <a href="https://hipobuyfind.com/category-916-Headwear.html">Cappelli</a>
+      <a href="https://hipobuyfind.com/category-917-Sets.html">Completi</a>
+      <a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html">Intimo</a>
+      <a href="https://hipobuyfind.com/category-919-Jersey.html">Maglie sportive</a>
+      <a href="https://hipobuyfind.com/category-920-Accessories.html">Accessori</a>
+    </div>
+  </nav>
+
+  <section class="hero" aria-labelledby="title">
+    <div>
+      <p class="eyebrow">Guida indipendente · Ricerca e confronto</p>
+      <h1 id="title">WheeBuy spreadsheet.<br>Prima i dettagli.</h1>
+      <p class="intro">Una raccolta di link può accendere un’idea. Per scegliere servono anche misure, fotografie leggibili e una verifica della variante. Qui trovi un metodo semplice per passare dall’ispirazione a un confronto ragionato.</p>
+      <a class="button" href="https://www.hipobuyfind.com">Esplora Hipobuyfind <span aria-hidden="true">↗</span></a>
+      <p class="caption-note">I collegamenti aprono Hipobuyfind. Questa pagina non è un servizio ufficiale WheeBuy.</p>
+    </div>
+    <figure>
+      <img
+        src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&amp;fit=crop&amp;w=900&amp;q=75"
+        width="900"
+        height="900"
+        alt="Sneaker Nike rossa con Swoosh bianco su sfondo rosso"
+        fetchpriority="high"
+        decoding="async">
+      <figcaption>01 / Forma, proporzioni, dettagli. Immagine d’ispirazione, non una scheda di vendita.</figcaption>
+    </figure>
+  </section>
+
+  <aside class="answer" aria-labelledby="quick">
+    <h2 id="quick">Che cosa cercare in uno spreadsheet?</h2>
+    <p>Un riferimento chiaro al prodotto, la categoria corretta e informazioni confrontabili. Usa la raccolta per creare una piccola selezione; poi controlla nella pagina di destinazione che modello, colore, taglia e contenuto dell’offerta corrispondano a ciò che cercavi.</p>
+  </aside>
+
+  <section class="section" aria-labelledby="method">
+    <div class="section-head">
+      <h2 id="method">Meno schede.<br>Confronti migliori.</h2>
+      <p>Una guida WheeBuy in italiano per chi vuole capire cosa verificare, senza confondere una foto convincente con una scelta già fatta.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="number">01 / DEFINISCI</span>
+        <h3>Parti da un’esigenza</h3>
+        <p>Per una ricerca di sneakers WheeBuy indica prima uso, silhouette e misura. Per l’abbigliamento WheeBuy parti dal tipo di capo e dalla vestibilità: aggiungi un dettaglio alla volta.</p>
+      </div>
+      <div class="step">
+        <span class="number">02 / OSSERVA</span>
+        <h3>Leggi oltre la copertina</h3>
+        <p>Nel confronto delle foto QC WheeBuy cerca immagini dello stesso articolo e della stessa variante. Una foto di catalogo serve come riferimento estetico; una fotografia di controllo mostra altri dettagli, senza certificare il prodotto.</p>
+      </div>
+      <div class="step">
+        <span class="number">03 / VERIFICA</span>
+        <h3>Riapri il riferimento</h3>
+        <p>Usare i link prodotti WheeBuy come appunti è utile solo se ricontrolli la destinazione. Se il titolo, il modello o la variante sono cambiati, elimina la scheda dal confronto.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="editorial">
+    <div class="section-head">
+      <h2 id="editorial">L’occhio nota lo stile.<br>Il confronto nota il resto.</h2>
+      <p>Nike, Louis Vuitton, Gucci, Hermès e Dior sono riferimenti di ricerca. Il nome del marchio, da solo, non dimostra provenienza o autenticità.</p>
+    </div>
+
+    <div class="editorial">
+      <figure>
+        <img
+          src="https://i.marieclaire.com.tw/assets/mc/202004/5E94352E89EC81586771246.jpeg"
+          width="1000"
+          height="667"
+          loading="lazy"
+          decoding="async"
+          alt="Composizione editoriale con sneakers Dior Oblique e Louis Vuitton Stellar">
+        <figcaption>
+          Monogrammi e volumi: osserva anche pannelli e proporzioni.
+          <span class="caption-note">Riferimento fotografico: Marie Claire Taiwan. Nessuna disponibilità commerciale implicita.</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <img
+          src="https://i.pinimg.com/originals/5c/63/c3/5c63c369c74b09d4e9fe131f4c576771.jpg"
+          width="1000"
+          height="667"
+          loading="lazy"
+          decoding="async"
+          alt="Sneakers Gucci Rhyton con pannelli monogramma multicolore e suole voluminose">
+        <figcaption>
+          Colore e costruzione: confronta la variante, non soltanto il nome.
+          <span class="caption-note">Immagine di riferimento da Pinterest. La fotografia non certifica l’autenticità.</span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="articles">
+      <article class="article">
+        <p class="eyebrow">Taccuino 01 / Calzature</p>
+        <h3>Sneakers: misure prima del numero</h3>
+        <p>Per capire come scegliere la taglia delle sneakers, misura entrambi i piedi e leggi la tabella associata al modello. La conversione tra taglie EU e centimetri va interpretata secondo le indicazioni del venditore: lunghezza del piede e lunghezza della soletta sono dati diversi.</p>
+        <ul>
+          <li>Per confrontare sneakers Nike considera modello, profilo della punta e destinazione d’uso.</li>
+          <li>Per cercare sneakers Louis Vuitton per modello annota il nome completo e la variante cromatica.</li>
+          <li>Quando valuti sneakers Dior e materiali, cerca una composizione dichiarata: l’aspetto non basta.</li>
+          <li>Per un confronto di sneakers Gucci osserva suola, pannelli e dettagli dello stesso modello.</li>
+        </ul>
+      </article>
+
+      <article class="article">
+        <p class="eyebrow">Taccuino 02 / Guardaroba</p>
+        <h3>Abbigliamento: confrontare capi reali</h3>
+        <p>Per scegliere una felpa in base alle misure, appoggia un capo che usi su una superficie piana. Il confronto tra larghezza del torace e lunghezza è più concreto della sola lettera sull’etichetta. Controlla anche spalle, maniche e unità di misura.</p>
+        <ul>
+          <li>Per una T-shirt oversize e vestibilità, confronta volume e lunghezza separatamente.</li>
+          <li>Prima di scegliere giacche per la mezza stagione verifica fodera e composizione.</li>
+          <li>Nel confronto di pantaloni e shorts misura vita, cavallo e lunghezza.</li>
+          <li>Per controllare le misure dei completi considera giacca o felpa e pantaloni come due capi.</li>
+        </ul>
+      </article>
+
+      <article class="article">
+        <p class="eyebrow">Taccuino 03 / Particolari</p>
+        <h3>Accessori: proporzioni e particolari</h3>
+        <p>Per confrontare accessori Hermès o altri riferimenti di stile, parti da dimensioni e funzione. Nelle foto di dettagli e cuciture cerca inquadrature nitide; per valutare chiusure e finiture servono immagini ravvicinate, non solo una vista generale.</p>
+        <ul>
+          <li>Per scegliere un cappello dalla circonferenza verifica anche l’eventuale regolazione.</li>
+          <li>Per leggere le misure dei gioielli distingui diametro, circonferenza e lunghezza della catena.</li>
+          <li>Nella ricerca di maglie sportive per taglia confronta torace e lunghezza del capo.</li>
+          <li>Prima di scegliere intimo e materiali leggi composizione e condizioni di reso.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="compare">
+    <div class="section-head">
+      <h2 id="compare">La scheda da tenere accanto.</h2>
+      <p>Quattro verifiche utili prima di proseguire. Se manca un dato decisivo, chiedi un chiarimento prima dell’acquisto.</p>
+    </div>
+    <div class="comparison">
+      <table>
+        <caption>Confronto pratico tra riferimento iniziale e informazioni da verificare</caption>
+        <thead>
+          <tr>
+            <th scope="col">Punto di controllo</th>
+            <th scope="col">Che cosa annotare</th>
+            <th scope="col">Che cosa verificare</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Identità</th>
+            <td>Nome, modello e fotografia principale.</td>
+            <td>Per verificare i link di uno spreadsheet, confronta l’identità del prodotto nella destinazione attuale.</td>
+          </tr>
+          <tr>
+            <th scope="row">Variante</th>
+            <td>Colore, taglia e accessori inclusi.</td>
+            <td>Controlla la disponibilità della variante selezionata: una pagina attiva può contenere opzioni esaurite.</td>
+          </tr>
+          <tr>
+            <th scope="row">Informazioni</th>
+            <td>Misure, composizione e fotografie pertinenti.</td>
+            <td>Per confrontare foto di catalogo e foto QC considera illuminazione, angolazione e corrispondenza dell’articolo.</td>
+          </tr>
+          <tr>
+            <th scope="row">Costo totale</th>
+            <td>Prezzo della variante e spese indicate.</td>
+            <td>Per stimare il costo totale prima dell’ordine includi le voci applicabili mostrate dal servizio: commissioni, trasporto ed eventuali oneri d’importazione.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section faq" aria-labelledby="faq">
+    <div>
+      <p class="eyebrow">Risposte essenziali</p>
+      <h2 id="faq">Domande prima del prossimo clic.</h2>
+    </div>
+    <div>
+      <details open>
+        <summary>Che cos’è una WheeBuy spreadsheet?</summary>
+        <p>È una raccolta di riferimenti a prodotti, utile per organizzare una ricerca e confrontare articoli. Ogni scheda va ricontrollata nella sua destinazione attuale prima di prendere una decisione.</p>
+      </details>
+      <details>
+        <summary>Questa pagina è il sito ufficiale di WheeBuy?</summary>
+        <p>No. È una guida editoriale indipendente. I collegamenti commerciali di questa pagina portano a Hipobuyfind, non a WheeBuy. Non dichiariamo affiliazioni con WheeBuy o con i marchi citati.</p>
+      </details>
+      <details>
+        <summary>Le foto QC dimostrano l’autenticità?</summary>
+        <p>No. Le foto QC, cioè fotografie di controllo qualità, possono mostrare dettagli visibili, ma non certificano autenticità, composizione dei materiali o durata.</p>
+      </details>
+      <details>
+        <summary>Come confrontare le taglie senza affidarsi solo a S, M o L?</summary>
+        <p>Confronta le misure in centimetri con un capo che già possiedi. Verifica come sono stati misurati torace, spalle e lunghezza e considera la vestibilità desiderata.</p>
+      </details>
+      <details>
+        <summary>Il prezzo mostrato è il costo finale?</summary>
+        <p>Non necessariamente. Controlla la variante selezionata e le eventuali spese di servizio, trasporto e importazione indicate durante l’acquisto. Questa guida non pubblica preventivi o tempi di consegna garantiti.</p>
+      </details>
+    </div>
+  </section>
+
+  <aside class="closing">
+    <div>
+      <h2>Trova un punto di partenza.</h2>
+      <p>Apri una categoria su Hipobuyfind, seleziona pochi riferimenti e confronta i dati che contano per te.</p>
+    </div>
+    <a class="button" href="https://www.hipobuyfind.com">Apri il catalogo <span aria-hidden="true">↗</span></a>
+  </aside>
+</main>
+
+<footer class="wrap">
+  <div class="footer-row">
+    <strong>hipobuyfind.com / Taccuino di stile</strong>
+    <span>Guida in italiano · 6 novembre 2026</span>
+  </div>
+  <p>Contenuti informativi indipendenti. Marchi e immagini sono usati come riferimenti editoriali; non implicano sponsorizzazioni, autenticazioni o disponibilità degli articoli. Verifica sempre le informazioni nella pagina del prodotto e le condizioni del servizio utilizzato.</p>
+</footer>
+</body>
+</html>
